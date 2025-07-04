@@ -1,0 +1,382 @@
+
+
+@font-face {
+  font-family: 'MiSans';
+  src: url('./fonts/MiSans-Normal.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'MiSans';
+    scroll-behavior: smooth;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav{
+    margin: 0 auto;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: #ab7853;
+    padding: 20px;
+    /* border-radius: 10px; */
+}
+
+.links{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+nav li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+nav li img{
+    height: 10vh;
+}
+
+nav li img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    border-radius: 45px;
+    box-shadow: 0 0 70px 30px #855d40;
+}
+
+.hero{
+    width: 80%;
+    text-align: center;
+    /* border: 1px solid black; */
+    height: 90vh;
+    margin: 0 auto;
+}
+
+.hero img, .hero-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.hero img{
+    z-index: 1;
+    object-fit: cover;
+}
+
+.hero-overlay{
+    z-index: 2;
+
+    /* Light overlay effect */
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-text-content{
+    position: relative;
+    top: 30%;
+    z-index: 3;
+
+    color: white;
+}
+
+@media screen and (max-width: 1000px) {
+    /* .hero{
+        height: auto;
+    } */
+
+    .hero-text-content h2, .our-story h2{
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    .hero-text-content h3, .our-story h3, .menu-content h3{
+        font-size: 16px;
+        font-weight: 20;
+    }
+
+    .hero-text-content p, .our-story p, .menu-content p{
+        font-size: 16px;
+    }
+
+    #about{
+        position: relative;
+        margin: 0 auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-content, .drinks-menu-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .our-story{
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        min-height: 50vh;
+        position: relative;
+        margin: 10px auto;
+        word-spacing: 3px;
+    }
+
+    .our-story div, .our-story p{
+        margin: 1em;
+    }
+
+    #contact{
+        height: auto;
+    }
+
+    .contact-text-content{
+        flex-direction: column;
+    }
+
+    .contact-text-content div{
+        margin: 1em;
+    }
+}
+
+.hero-text-content img{
+    position: relative;
+    height: 20vh;
+    width: 20%;
+    object-fit: contain;
+}
+
+h2{
+    font-size: 80px;
+    font-weight: 500;
+}
+
+h3{
+    font-size: 30px;
+    font-weight: 20;
+}
+
+p{
+    font-size: large;
+}
+
+#about{
+    position: relative;
+    margin: 10px auto;
+    display: flex;
+    min-height: 90vh;
+    height: auto;
+    width: 80%;
+    /* border: 1px solid black; */
+}
+
+#about img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.our-story{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.menu{
+    min-height: 130vh;
+    height: auto;
+    background-color: #dfae8b;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    /* display: flex;
+    flex-direction: column; */
+}
+/* 
+.menu-overlay{
+    top: 0;
+    left: 10%;
+    margin: 0 auto;
+    min-height: 150vh;
+    height: auto;
+    background-color: white;
+    position: absolute;
+    width: 80%;
+    z-index: 2;
+} */
+
+.menu-content, .drinks-menu-content{
+    position: relative;
+    z-index: 3;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+}
+
+.menu-content{
+    min-height: 80vh;
+}
+
+.drinks-menu-content{
+    min-height: 70vh;
+}
+
+.menu-content img, .drinks-menu-content img{
+    height: auto;
+    width: 100%;
+    /* padding: 2px; */
+    object-fit: cover;
+}
+
+.drinks-menu-content img{
+    height: 70vh;
+}
+
+.breakfast, .specials, .coffee-variants, .tea-variants{
+    height: auto;
+    /* min-width: 35%;
+    width: auto; */
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* border: 1px solid black; */
+    padding: 5em 1em;
+    background-color: white;
+}
+
+.coffee-variants h3, p, ul li{
+    /* border: 1px solid black; */
+}
+
+.coffee-variants ul{
+    list-style-type: none;
+}
+
+#contact{
+    position: relative;
+    /* border: 1px solid black; */
+    height: 90vh;
+    /* top: 10px; */
+    left: 0;
+}
+
+#contact img, .contact-overlay{
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#contact img{
+    z-index: 1;
+}
+
+.contact-overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.contact-text-content{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    width: 80%;
+    top: 10%;
+    left: 0;
+    color: rgb(243, 245, 221);
+    z-index: 3;
+}
+
+.hour-of-ops, .address{
+    background-color: #855d40;
+    padding: 1em;
+    min-width: 30%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.address h3{
+    font-size: 24px;
+}
+
+.hour-of-ops button{
+    width: 40%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #dfae8b;
+    border: 0px;
+}
+
+.hour-of-ops button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.ops-days-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20vh;
+}
+
+.address iframe{
+    margin: 0 auto;
+    width: 90%;
+    height: 40vh;
+}
+
+footer{
+    height: 15vh;
+    background-color: #0f0f0f;
+}
+
+.footer-text-content{
+    position: relative;
+    top: 40%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.icons{
+    /* border: 1px solid white; */
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons a  i{
+    color: white;
+    font-size: 26px;
+}
